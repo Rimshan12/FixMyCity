@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Complaint - FixMyCity</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>FixMyCity</h2>
+
+        <div>
+            <a href="citizen-dashboard.html">Dashboard</a>
+            <a href="add-complaint.html">Register Complaint</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <div class="tracking-container">
+
+        <h1>Track Your Complaint</h1>
+
+        <p class="tracking-intro">
+            Enter your complaint reference number to check its current status.
+        </p>
+
+        <div class="tracking-form">
+            <input
+                type="text"
+                id="referenceNumber"
+                placeholder="Enter Complaint Reference Number"
+            >
+
+            <button class="btn" onclick="trackComplaint()">
+                Track Complaint
+            </button>
+        </div>
+
+        <div id="trackingResult"></div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 FixMyCity. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/track.js"></script>
+
+</body>
+</html>

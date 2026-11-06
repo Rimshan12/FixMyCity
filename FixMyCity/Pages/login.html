@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FixMyCity</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>FixMyCity</h2>
+        <div>
+            <a href="../index.html">Home</a>
+            <a href="register.html">Register</a>
+        </div>
+    </nav>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <div class="login-heading">
+                <h1>Welcome Back!</h1>
+                <p>Login to your FixMyCity account</p>
+            </div>
+
+            <form id="loginForm">
+
+                <label>Select Your Role</label>
+
+                <div class="login-role-options">
+
+                    <label class="login-role-card">
+                        <input type="radio" name="loginRole" value="Citizen" required>
+                        <span class="role-icon">👤</span>
+                        <span class="role-name">Citizen</span>
+                    </label>
+
+                    <label class="login-role-card">
+                        <input type="radio" name="loginRole" value="Municipal Officer">
+                        <span class="role-icon">🏛️</span>
+                        <span class="role-name">Municipal Officer</span>
+                    </label>
+
+                    <label class="login-role-card">
+                        <input type="radio" name="loginRole" value="Department Staff">
+                        <span class="role-icon">👷</span>
+                        <span class="role-name">Department Staff</span>
+                    </label>
+
+                    <label class="login-role-card">
+                        <input type="radio" name="loginRole" value="Administrator">
+                        <span class="role-icon">🛡️</span>
+                        <span class="role-name">Administrator</span>
+                    </label>
+
+                </div>
+
+                <label for="loginEmail">Email Address</label>
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your registered email"
+                    required
+                >
+
+                <label for="loginPassword">Password</label>
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <p id="loginMessage"></p>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="register-link">
+                Don't have an account?
+                <a href="register.html">Register here</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="../js/auth.js"></script>
+
+</body>
+</html>

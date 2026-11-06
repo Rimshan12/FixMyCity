@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Dashboard - FixMyCity</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>FixMyCity</h2>
+        <div>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+
+        <div class="admin-welcome">
+            <h1>Administrator Dashboard</h1>
+            <p>Welcome, <span id="adminName"></span>!</p>
+            <p>Manage users and monitor all civic complaints.</p>
+        </div>
+
+        <h2>Complaint Overview</h2>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Total Complaints</h3>
+                <p id="adminTotal">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="adminPending">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>In Progress</h3>
+                <p id="adminProgress">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <p id="adminResolved">0</p>
+            </div>
+        </div>
+
+        <h2>Registered Users</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable">
+                </tbody>
+            </table>
+        </div>
+
+        <h2>All Complaints</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reference No.</th>
+                        <th>Complaint Title</th>
+                        <th>Category</th>
+                        <th>Citizen Email</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="adminComplaintTable">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="../js/admin-dashboard.js"></script>
+
+</body>
+</html>

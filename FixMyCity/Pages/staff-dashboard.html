@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Staff Dashboard - FixMyCity</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h2>FixMyCity</h2>
+
+        <div>
+            <a href="staff-dashboard.html">Dashboard</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <section class="staff-container">
+
+        <h2>Department Staff Dashboard</h2>
+
+        <p>View assigned complaints and update their progress.</p>
+
+        <div class="staff-welcome">
+            <h3>Welcome, <span id="staffName"></span></h3>
+            <p>Department: <span id="staffDepartment">General</span></p>
+        </div>
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <h3>Assigned Complaints</h3>
+                <p id="staffTotal">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="staffPending">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>In Progress</h3>
+                <p id="staffProgress">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <p id="staffResolved">0</p>
+            </div>
+
+        </div>
+
+        <div class="staff-complaints">
+
+            <h3>Assigned Complaints</h3>
+
+            <div id="staffComplaintList"></div>
+
+        </div>
+
+    </section>
+
+    <script src="../js/staff-dashboard.js"></script>
+
+</body>
+</html>

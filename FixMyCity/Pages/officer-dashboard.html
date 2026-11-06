@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipal Officer Dashboard - FixMyCity</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>FixMyCity</h2>
+
+        <div>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <section class="officer-container">
+
+        <h2>Municipal Officer Dashboard</h2>
+        <p>Welcome, <span id="officerName"></span>!</p>
+        <p>View and monitor complaints submitted by citizens.</p>
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <h3>Total Complaints</h3>
+                <p id="officerTotal">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="officerPending">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>In Progress</h3>
+                <p id="officerProgress">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <p id="officerResolved">0</p>
+            </div>
+
+        </div>
+
+        <div class="table-container">
+
+            <h3>All Citizen Complaints</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reference No.</th>
+                        <th>Complaint Title</th>
+                        <th>Category</th>
+                        <th>Citizen Email</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Assign To Staff</th>
+                    </tr>
+                </thead>
+
+                <tbody id="officerComplaintTable">
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+
+    <script src="../js/officer-dashboard.js"></script>
+
+</body>
+</html>

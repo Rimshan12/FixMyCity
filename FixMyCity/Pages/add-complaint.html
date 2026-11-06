@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Complaint - FixMyCity</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>FixMyCity</h2>
+
+        <div>
+            <a href="citizen-dashboard.html">Dashboard</a>
+            <a href="my-complaints.html">My Complaints</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <div class="complaint-container">
+
+        <h1>Register a Complaint</h1>
+        <p class="complaint-intro">
+            Report a civic issue in your area. Provide the details below
+            so that the concerned department can take action.
+        </p>
+
+        <form id="complaintForm">
+
+            <label for="complaintTitle">Complaint Title</label>
+            <input type="text" id="complaintTitle"
+                   placeholder="Example: Garbage not collected"
+                   maxlength="80" required>
+
+            <label for="category">Complaint Category</label>
+            <select id="category" required>
+                <option value="">Select a category</option>
+                <option value="Garbage Collection">Garbage Collection</option>
+                <option value="Road Damage">Road Damage</option>
+                <option value="Streetlight Issue">Streetlight Issue</option>
+                <option value="Water Leakage">Water Leakage</option>
+                <option value="Drainage Problem">Drainage Problem</option>
+                <option value="Public Toilet Issue">Public Toilet Issue</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="description">Complaint Description</label>
+            <textarea id="description"
+                      placeholder="Describe the problem in detail..."
+                      rows="5" maxlength="1000" required></textarea>
+
+            <label for="location">Problem Location</label>
+            <input type="text" id="location"
+                   placeholder="Enter area, street or landmark"
+                   maxlength="150" required>
+
+            <label for="photo">Upload Photograph (Optional)</label>
+            <input type="file" id="photo" accept="image/jpeg,image/png,image/webp">
+
+            <p class="file-note">
+                Accepted formats: JPG, PNG and WEBP. Maximum size: 2 MB.
+            </p>
+
+            <div id="imagePreview"></div>
+
+            <button type="submit" class="btn complaint-submit">
+                Submit Complaint
+            </button>
+
+        </form>
+
+        <p id="complaintMessage" class="message"></p>
+
+    </div>
+
+    <footer>
+        <p>© 2026 FixMyCity. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/complaints.js"></script>
+
+</body>
+</html>
